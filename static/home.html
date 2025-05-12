@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray Analysis - Accueil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-image {
+            background-image: url('https://via.placeholder.com/600x400?text=Code+Background');
+            background-size: cover;
+            background-position: center;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1 0 auto;
+        }
+        .footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white font-sans">
+    <nav class="bg-white shadow p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-2 md:mb-0">
+                <img src="https://via.placeholder.com/40?text=Logo" alt="Logo" class="w-10 h-10 mr-2">
+                <div class="text-2xl font-bold text-blue-800">X-Ray Analysis</div>
+            </div>
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <a href="/home" class="px-4 py-2 text-gray-600 hover:text-blue-800">Accueil</a>
+                <a href="/models" class="px-4 py-2 text-gray-600 hover:text-blue-800">Modèles</a>
+                <a href="/upload" class="px-4 py-2 text-gray-600 hover:text-blue-800">Tester</a>
+                <a href="/about" class="px-4 py-2 text-gray-600 hover:text-blue-800">À propos</a>
+                <a href="https://github.com/votre-repo" class="px-4 py-2 text-gray-600 hover:text-blue-800">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content container mx-auto p-6">
+        <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Pneumonia Detection with Deep Learning</h1>
+                <p class="text-gray-600 mb-6 max-w-xl">Explore trained PyTorch models that detect pneumonia from chest X-rays. Learn about model architectures and test their performance.</p>
+                <div class="space-x-4">
+                    <a href="/models" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition duration-300">Explore Models</a>
+                    <a href="/upload" class="bg-gray-200 text-blue-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition duration-300">Test Models</a>
+                </div>
+            </div>
+            <div class="relative w-full md:w-1/2 mt-6 md:mt-0">
+                <div class="hero-image bg-gray-800 rounded-lg shadow-lg overflow-hidden h-64 md:h-80">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 p-6 text-white">
+                        <p class="text-sm">AI-Powered Diagnosis</p>
+                        <p class="text-xs">Using VGG16, ResNet50 & Custom CNN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <p class="text-gray-600 mb-6 text-center max-w-2xl mx-auto">Explore the architecture, performance, and implementation details of our trained models for pneumonia detection.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h2 class="text-xl font-semibold text-blue-800">VGG16</h2>
+                    </div>
+                    <span class="inline-block bg-teal-100 text-teal-800 text-sm font-semibold px-2.5 py-0.5 rounded mb-4">94.5% accuracy</span>
+                    <p class="text-gray-600 mb-4">A pre-trained model fine-tuned for pneumonia detection in chest X-rays. Utilizes transfer learning from ImageNet.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Pre-trained</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Transfer Learning</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">16 Layers</span>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <a href="https://github.com/votre-repo/vgg16" class="text-blue-600 hover:underline">View Code</a>
+                        <a href="/model/vgg16" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-center">Learn More</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h2 class="text-xl font-semibold text-blue-800">ResNet50</h2>
+                    </div>
+                    <span class="inline-block bg-teal-100 text-teal-800 text-sm font-semibold px-2.5 py-0.5 rounded mb-4">95.2% accuracy</span>
+                    <p class="text-gray-600 mb-4">A residual network architecture that uses skip connections to solve the vanishing gradient problem in deep networks.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Residual Blocks</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Skip Connections</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">50 Layers</span>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <a href="https://github.com/votre-repo/resnet50" class="text-blue-600 hover:underline">View Code</a>
+                        <a href="/model/resnet50" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-center">Learn More</a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h2 class="text-xl font-semibold text-blue-800">Custom CNN</h2>
+                    </div>
+                    <span class="inline-block bg-teal-100 text-teal-800 text-sm font-semibold px-2.5 py-0.5 rounded mb-4">92.8% accuracy</span>
+                    <p class="text-gray-600 mb-4">A lightweight convolutional neural network designed specifically for pneumonia detection from chest X-rays.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Custom Architecture</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Lightweight</span>
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-2.5 py-0.5 rounded">Fast Inference</span>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <a href="https://github.com/votre-repo/cnn" class="text-blue-600 hover:underline">View Code</a>
+                        <a href="/model/cnn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-center">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer class="bg-blue-800 text-white p-4">
+            <div class="container mx-auto text-center">
+                <p>© 2025 Plateforme E-Learning | Développez vos compétences en IA médicale</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-white shadow p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">X-Ray Analysis</div>
+            <div>
+                <a href="{{ url_for('index') }}" class="px-4 py-2 text-gray-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ url_for('upload_file') }}" class="px-4 py-2 text-gray-600 hover:text-blue-800">Tester</a>
+            </div>
+            <a href="https://github.com/votre-repo" class="text-gray-600 hover:text-blue-800">GitHub</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Modèles de détection de pneumonie</h1>
+        <p class="text-gray-600 mb-6">Explorez nos modèles entraînés pour détecter la pneumonie à partir de radiographies.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for model_name, info in models.items() %}
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-semibold">{{ model_name|upper }}</h2>
+                <p class="text-gray-600 mb-4">{{ info.desc }}</p>
+                <a href="{{ url_for('model_details', model_name=model_name) }}" class="text-blue-600 hover:underline">En savoir plus</a>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('upload_file') }}" class="mt-6 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Tester un modèle</a>
+    </div>
+
+    <footer class="bg-white p-4 mt-6 text-center text-gray-600">
+        © 2025 Plateforme E-Learning
+    </footer>
+</body>
+</html>

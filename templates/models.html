@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modèles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1 0 auto;
+        }
+        .footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-100 to-white font-sans">
+    <nav class="bg-white shadow p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-2 md:mb-0">
+                <img src="https://via.placeholder.com/40?text=Logo" alt="Logo" class="w-10 h-10 mr-2">
+                <div class="text-2xl font-bold text-blue-800">X-Ray Analysis</div>
+            </div>
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+                <a href="/home" class="px-4 py-2 text-gray-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ url_for('models_page') }}" class="px-4 py-2 text-gray-600 hover:text-blue-800">Modèles</a>
+                <a href="{{ url_for('upload_file') }}" class="px-4 py-2 text-gray-600 hover:text-blue-800">Tester</a>
+                <a href="{{ url_for('about') }}" class="px-4 py-2 text-gray-600 hover:text-blue-800">À propos</a>
+                <a href="https://github.com/votre-repo" class="px-4 py-2 text-gray-600 hover:text-blue-800">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content container mx-auto p-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-800 mb-6 text-center">Modèles</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">VGG16</h2>
+                <p class="text-gray-600 mb-4">Modèle VGG16 avec 16 couches, utilisant le transfert learning.</p>
+                <p class="text-gray-600 mb-4">Précision : <span class="font-semibold text-teal-600">94.5%</span></p>
+                <a href="/model/vgg16" class="text-blue-600 hover:underline">En savoir plus</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">ResNet50</h2>
+                <p class="text-gray-600 mb-4">ResNet50 avec 50 couches et blocs résiduels.</p>
+                <p class="text-gray-600 mb-4">Précision : <span class="font-semibold text-teal-600">95.2%</span></p>
+                <a href="/model/resnet50" class="text-blue-600 hover:underline">En savoir plus</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                <h2 class="text-xl font-semibold text-blue-800 mb-2">Custom CNN</h2>
+                <p class="text-gray-600 mb-4">CNN personnalisé avec 2 couches convolutives.</p>
+                <p class="text-gray-600 mb-4">Précision : <span class="font-semibold text-teal-600">92.8%</span></p>
+                <a href="/model/cnn" class="text-blue-600 hover:underline">En savoir plus</a>
+            </div>
+        </div>
+        <div class="text-center mt-6">
+            <a href="/home" class="text-blue-600 hover:underline">Retour à l'accueil</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer class="bg-blue-800 text-white p-4">
+            <div class="container mx-auto text-center">
+                <p>© 2025 Plateforme E-Learning | Développez vos compétences en IA médicale</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
